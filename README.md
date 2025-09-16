@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern Portfolio Website
 
-## Getting Started
+A stunning, modern personal portfolio website built with Next.js, React, TypeScript, and Tailwind CSS. Features smooth animations, dark/light mode toggle, and responsive design.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- **🌙 Dark/Light Mode**: Smooth theme switching with system preference detection
+- **🎬 Video Project Cards**: Auto-playing looped videos with hover effects
+- **📱 Fully Responsive**: Mobile-first design that works on all devices
+- **🎭 Smooth Animations**: Beautiful Framer Motion animations throughout
+- **⚡ Performance Optimized**: Built with Next.js 15 and modern best practices
+- **🎨 Modern Design**: Clean, minimalistic design with elegant typography
+- **📧 Contact Form**: Integrated contact form with email functionality
+- **🔧 TypeScript**: Fully typed for better development experience
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 15
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Icons**: Lucide React
+- **Fonts**: Geist Sans & Geist Mono
+
+## 🚀 Getting Started
+
+1. **Install dependencies**:
+
+   ```bash
+   npm install
+   ```
+
+2. **Run the development server**:
+
+   ```bash
+   npm run dev
+   ```
+
+3. **Open your browser** and visit [http://localhost:3000](http://localhost:3000)
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── layout.tsx          # Root layout with theme provider
+│   ├── page.tsx            # Main page with all sections
+│   └── globals.css         # Global styles and theme variables
+├── components/
+│   ├── Navigation.tsx      # Sticky navigation with smooth scroll
+│   ├── HeroSection.tsx     # Hero section with CTA buttons
+│   ├── AboutSection.tsx    # About me with skills grid
+│   ├── ProjectsSection.tsx # Projects with video cards
+│   └── ContactSection.tsx  # Contact form and info
+├── contexts/
+│   └── ThemeContext.tsx    # Theme context for dark/light mode
+└── types/
+    └── portfolio.ts        # TypeScript type definitions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🎨 Customization
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Personal Information
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Update the following components with your information:
 
-## Learn More
+1. **Hero Section** (`src/components/HeroSection.tsx`):
 
-To learn more about Next.js, take a look at the following resources:
+   - Name and title
+   - Description
+   - Social media links
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. **About Section** (`src/components/AboutSection.tsx`):
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+   - Biography
+   - Skills and technologies
+   - Experience stats
 
-## Deploy on Vercel
+3. **Projects Section** (`src/components/ProjectsSection.tsx`):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   - Replace sample projects with your own
+   - Update video URLs, descriptions, and links
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+4. **Contact Section** (`src/components/ContactSection.tsx`):
+   - Update contact information
+   - Configure email integration
+
+### Styling
+
+- **Colors**: Modify the gradient colors in Tailwind classes
+- **Fonts**: Change fonts in `src/app/layout.tsx`
+- **Animations**: Adjust Framer Motion animations in each component
+
+## 📧 Contact Form Setup
+
+The contact form is currently set up to open the user's email client. For a production setup, consider integrating with:
+
+- **EmailJS** for client-side email sending
+- **Formspree** for form handling
+- **Netlify Forms** if deploying to Netlify
+- **Custom API route** with a service like SendGrid or Nodemailer
+
+## 🚀 Deployment
+
+### Deploy to Vercel (Recommended)
+
+1. Push your code to GitHub
+2. Connect your repository to [Vercel](https://vercel.com)
+3. Deploy with one click
+
+### Other Platforms
+
+- **Netlify**: Drag and drop your `out` folder after running `npm run build`
+- **GitHub Pages**: Use the `gh-pages` package for static deployment
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+Feel free to fork this project and submit pull requests for any improvements.
+
+---
+
+Built with ❤️ using Next.js and Tailwind CSS
