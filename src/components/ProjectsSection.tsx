@@ -13,9 +13,10 @@ const ProjectsSection = () => {
       title: "ig.news",
       description:
         "ig.news is a subscription-based newsletter application built with Next.js, featuring Stripe payments, user authentication, and content management through Prismic CMS.",
-      imageUrl: "/ignews.png",
+      videoUrl: "/ignews.mp4",
       technologies: ["Next.js", "ReactJs", "FaunaDB", "Stripe"],
       githubUrl: "https://github.com/rafamenegheti/ignews",
+      liveUrl: "https://ignews-qos25pzu8-rafamenegheti.vercel.app",
     },
     {
       id: "2",
