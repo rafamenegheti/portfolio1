@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import { ToastProvider } from "@/contexts/ToastContext";
 import MagneticCursor from "@/components/MagneticCursor";
 import FloatingParticles from "@/components/FloatingParticles";
 import ScrollProgress from "@/components/ScrollProgress";
@@ -17,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Your Name",
+  title: "Portfolio - Rafael Menegheti",
   description:
     "Modern, elegant personal portfolio showcasing full-stack development projects and skills.",
 };
@@ -48,10 +49,12 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider>
-          <MagneticCursor />
-          <FloatingParticles />
-          <ScrollProgress />
-          {children}
+          <ToastProvider>
+            <MagneticCursor />
+            <FloatingParticles />
+            <ScrollProgress />
+            {children}
+          </ToastProvider>
         </ThemeProvider>
       </body>
     </html>

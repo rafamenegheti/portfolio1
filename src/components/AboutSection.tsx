@@ -9,24 +9,33 @@ import {
   Palette,
   Database,
   Globe,
-  Smartphone,
   Server,
-  Figma,
   GitBranchPlus,
+  TestTube,
+  Zap,
+  FileText,
+  Cloud,
+  Container,
+  Braces,
 } from "lucide-react";
 
 const AboutSection = () => {
   const skills = [
-    { name: "React/Next.js", icon: Code2, category: "frontend" },
-    { name: "TypeScript", icon: Code2, category: "frontend" },
-    { name: "Tailwind CSS", icon: Palette, category: "frontend" },
-    { name: "Node.js", icon: Server, category: "backend" },
-    { name: "PostgreSQL", icon: Database, category: "backend" },
-    { name: "MongoDB", icon: Database, category: "backend" },
-    { name: "REST APIs", icon: Globe, category: "backend" },
-    { name: "Mobile Dev", icon: Smartphone, category: "frontend" },
-    { name: "UI/UX Design", icon: Figma, category: "design" },
-    { name: "Git/GitHub", icon: GitBranchPlus, category: "tools" },
+    { name: "JavaScript", icon: Code2, category: "language" },
+    { name: "TypeScript", icon: Code2, category: "language" },
+    { name: "React/Next.js", icon: Braces, category: "frontend" },
+    { name: "React Native", icon: Globe, category: "mobile" },
+    { name: "Node/Express", icon: Server, category: "backend" },
+    { name: "Python", icon: Code2, category: "language" },
+    { name: "C++", icon: Code2, category: "language" },
+    { name: "HTML/CSS", icon: Palette, category: "frontend" },
+    { name: "SQL/NoSQL", icon: Database, category: "database" },
+    { name: "Git", icon: GitBranchPlus, category: "tools" },
+    { name: "AWS", icon: Cloud, category: "cloud" },
+    { name: "Docker", icon: Container, category: "tools" },
+    { name: "Jest/Testing", icon: TestTube, category: "testing" },
+    { name: "AI Tools", icon: Zap, category: "tools" },
+    { name: "Clean Code", icon: FileText, category: "practices" },
   ];
 
   const containerVariants = {
@@ -86,10 +95,13 @@ const AboutSection = () => {
             variants={itemVariants}
             className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
-            I&apos;m a passionate full-stack developer with a keen eye for
-            design and a love for creating seamless user experiences. With
-            expertise in modern web technologies and a commitment to continuous
-            learning, I bring ideas to life through clean, efficient code.
+            I’m a Full Stack Web Developer with 4 years of experience building
+            modern, scalable, and high-performance applications. Skilled in
+            Next.js, React, and Node.js, I specialize in delivering seamless
+            user experiences across the entire development cycle. With a strong
+            foundation in cloud solutions (AWS), automated testing, and clean
+            code practices, I thrive on turning complex challenges into
+            efficient, innovative software solutions.
           </motion.p>
         </motion.div>
 
@@ -112,20 +124,25 @@ const AboutSection = () => {
               variants={itemVariants}
               className="text-gray-600 dark:text-gray-400 leading-relaxed"
             >
-              Started my journey in web development 3+ years ago, I&apos;ve had
-              the privilege of working on diverse projects ranging from
-              e-commerce platforms to mobile applications. My approach combines
-              technical expertise with creative problem-solving.
+              I started my journey in tech over 4 years ago, first supporting
+              enterprise systems and later moving into full-stack web
+              development. Since then, I’ve had the opportunity to work on
+              diverse projects — from building scalable e-learning platforms and
+              B2B solutions to developing data-driven applications for
+              meteorological analysis.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-gray-600 dark:text-gray-400 leading-relaxed"
             >
-              When I&apos;m not coding, you&apos;ll find me exploring new
-              technologies, contributing to open-source projects, or sharing
-              knowledge with the developer community. I believe in writing code
-              that not only works but is also maintainable and scalable.
+              My approach combines technical expertise in Next.js, React,
+              Node.js, and AWS with a focus on clean code and performance
+              optimization. Outside of coding, I’m always exploring new
+              technologies, improving my craft through testing practices, and
+              working on personal projects that challenge my creativity. I
+              believe in building software that is not only functional, but also
+              maintainable, scalable, and impactful.
             </motion.p>
 
             <motion.div
@@ -134,7 +151,7 @@ const AboutSection = () => {
             >
               <div className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-md">
                 <h4 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
-                  50+
+                  10+
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400">
                   Projects Completed
@@ -142,7 +159,7 @@ const AboutSection = () => {
               </div>
               <div className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-md">
                 <h4 className="text-2xl font-bold text-purple-600 dark:text-purple-400">
-                  3+
+                  4+
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400">
                   Years Experience

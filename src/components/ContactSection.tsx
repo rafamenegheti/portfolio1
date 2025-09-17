@@ -15,8 +15,10 @@ import {
   Twitter,
 } from "lucide-react";
 import { ContactForm } from "@/types/portfolio";
+import { useToastContext } from "@/contexts/ToastContext";
 
 const ContactSection = () => {
+  const { addToast } = useToastContext();
   const [formData, setFormData] = useState<ContactForm>({
     name: "",
     email: "",
@@ -39,45 +41,46 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
+    addToast({
+      message:
+        "🚧 Contact form is currently in development. This feature will be available soon!",
+      type: "info",
+      duration: 6000,
+    });
+
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    const subject = encodeURIComponent(
-      formData.subject || "Contact from Portfolio"
-    );
-    const body = encodeURIComponent(
-      `Hi,\n\nName: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
-    window.location.href = `mailto:your.email@example.com?subject=${subject}&body=${body}`;
-
     setIsSubmitting(false);
-    setFormData({ name: "", email: "", subject: "", message: "" });
   };
 
   const contactInfo = [
     {
       icon: Mail,
       label: "Email",
-      value: "your.email@example.com",
-      href: "mailto:your.email@example.com",
+      value: "rafaelmenegheti51@gmail.com",
+      href: "mailto:rafaelmenegheti51@gmail.com",
     },
     {
       icon: Phone,
       label: "Phone",
-      value: "+1 (555) 123-4567",
-      href: "tel:+15551234567",
+      value: "+55 (16) 99465-3737",
+      href: "tel:+5516994653737",
     },
     {
       icon: MapPin,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Franca - SP, BR",
       href: "https://maps.google.com/?q=San+Francisco,CA",
     },
   ];
 
   const socialLinks = [
-    { icon: Github, href: "https://github.com", label: "GitHub" },
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Twitter, href: "https://twitter.com", label: "Twitter" },
+    { icon: Github, href: "https://github.com/rafamenegheti", label: "GitHub" },
+    {
+      icon: Linkedin,
+      href: "www.linkedin.com/in/rafael-menegheti-4532a0219",
+      label: "LinkedIn",
+    },
   ];
 
   const containerVariants = {

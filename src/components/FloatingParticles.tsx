@@ -47,7 +47,7 @@ const FloatingParticles = () => {
   }, []);
 
   return (
-    <div className="fixed inset-0 pointer-events-none z-0">
+    <div className="fixed inset-0 pointer-events-none -z-10">
       {particles.map((particle) => {
         const distanceToMouse = Math.sqrt(
           Math.pow(mousePosition.x - particle.x, 2) +

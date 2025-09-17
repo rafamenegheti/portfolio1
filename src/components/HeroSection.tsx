@@ -86,7 +86,7 @@ const HeroSection = () => {
               </span>
               <br />
               <span className="text-gray-900 dark:text-white">
-                <TextReveal text="Your Name" type="char" delay={0.8} />
+                <TextReveal text="Rafael" type="char" delay={0.8} />
               </span>
             </h1>
           </motion.div>
@@ -94,7 +94,7 @@ const HeroSection = () => {
           <motion.div variants={itemVariants} className="mb-8">
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-4">
               <TextReveal
-                text="Full Stack Developer & UI/UX Designer"
+                text="Full Stack Developer"
                 type="typewriter"
                 delay={1.5}
               />

@@ -107,7 +107,7 @@ const MagneticCursor = () => {
   return (
     <>
       <motion.div
-        className="fixed top-0 left-0 w-10 h-10 border-2 border-blue-400/50 dark:border-blue-300/50 rounded-full pointer-events-none z-[9999]"
+        className="fixed top-0 left-0 w-10 h-10 border-2 border-blue-400/50 dark:border-blue-300/50 rounded-full pointer-events-none z-[9998]"
         variants={ringVariants}
         animate={cursorVariant}
         transition={{
@@ -121,7 +121,7 @@ const MagneticCursor = () => {
       />
 
       <motion.div
-        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[10000] rounded-full"
+        className="fixed top-0 left-0 w-6 h-6 pointer-events-none z-[9999] rounded-full"
         variants={variants}
         animate={cursorVariant}
         transition={{
@@ -138,7 +138,7 @@ const MagneticCursor = () => {
       />
 
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 pointer-events-none z-[9998] rounded-full"
+        className="fixed top-0 left-0 w-8 h-8 pointer-events-none z-[9997] rounded-full"
         animate={{
           x: mousePosition.x - 16,
           y: mousePosition.y - 16,
@@ -158,7 +158,7 @@ const MagneticCursor = () => {
       />
 
       <motion.div
-        className="fixed top-0 left-0 w-16 h-16 pointer-events-none z-[9997] rounded-full"
+        className="fixed top-0 left-0 w-16 h-16 pointer-events-none z-[9996] rounded-full"
         animate={{
           x: mousePosition.x - 32,
           y: mousePosition.y - 32,
@@ -180,7 +180,7 @@ const MagneticCursor = () => {
       {Array.from({ length: 6 }).map((_, i) => (
         <motion.div
           key={i}
-          className="fixed top-0 left-0 w-1 h-1 bg-blue-400 rounded-full pointer-events-none z-[9996]"
+          className="fixed top-0 left-0 w-1 h-1 bg-blue-400 rounded-full pointer-events-none z-[9995]"
           animate={{
             x: mousePosition.x - 2 + Math.cos((Date.now() / 1000 + i) * 2) * 15,
             y: mousePosition.y - 2 + Math.sin((Date.now() / 1000 + i) * 2) * 15,

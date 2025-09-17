@@ -50,7 +50,7 @@ const Navigation = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center h-16">
+        <div className="flex items-center justify-between h-16 md:justify-start">
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -58,11 +58,11 @@ const Navigation = () => {
             className="flex-shrink-0"
           >
             <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Portfolio
+              Rafael Menegheti
             </h1>
           </motion.div>
 
-          <div className="hidden md:flex flex-1 justify-center">
+          <div className="hidden md:flex md:flex-1 md:justify-center">
             <div className="flex items-baseline space-x-8">
               {navItems.map((item, index) => (
                 <motion.button
@@ -80,7 +80,7 @@ const Navigation = () => {
             </div>
           </div>
 
-          <div className="flex items-center space-x-4 flex-shrink-0">
+          <div className="flex items-center space-x-4 md:flex-shrink-0">
             {mounted ? (
               <motion.button
                 initial={{ opacity: 0, scale: 0.8 }}

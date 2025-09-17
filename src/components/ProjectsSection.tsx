@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { ExternalLink, Github } from "lucide-react";
 import { Project } from "@/types/portfolio";
 
@@ -9,35 +10,30 @@ const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: "1",
-      title: "E-Commerce Platform",
+      title: "ig.news",
       description:
-        "A full-featured e-commerce platform with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.",
-      videoUrl:
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-      technologies: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+        "ig.news is a subscription-based newsletter application built with Next.js, featuring Stripe payments, user authentication, and content management through Prismic CMS.",
+      imageUrl: "/ignews.png",
+      technologies: ["Next.js", "ReactJs", "FaunaDB", "Stripe"],
+      githubUrl: "https://github.com/rafamenegheti/ignews",
     },
     {
       id: "2",
-      title: "Task Management App",
+      title: "dashgo.",
       description:
-        "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-      videoUrl:
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-      technologies: ["Next.js", "TypeScript", "MongoDB", "Socket.io"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
+        "DashGo is a Next.js admin dashboard application built with Chakra UI that includes user authentication, data visualization charts, and user management functionality.",
+      videoUrl: "/dashgo.mp4",
+      technologies: ["Next.js", "TypeScript"],
+      githubUrl: "https://github.com/rafamenegheti/dashgo",
     },
     {
       id: "3",
-      title: "Social Media Dashboard",
+      title: "BEWEAR",
       description:
-        "A comprehensive social media analytics dashboard with data visualization, scheduling features, and multi-platform integration.",
-      videoUrl:
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-      technologies: ["React", "D3.js", "Express", "Redis"],
-      githubUrl: "https://github.com",
+        "BEWEAR is a modern e-commerce fashion website built with Next.js 15, featuring responsive design, user authentication, shopping cart functionality, and a complete product catalog for clothing and accessories.",
+      videoUrl: "/bewear.mp4",
+      technologies: ["Next.js", "ReactJs", "TailwindCSS"],
+      githubUrl: "https://github.com/rafamenegheti/bewear",
     },
     {
       id: "4",
@@ -151,16 +147,26 @@ const ProjectsSection = () => {
               className="group relative bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
               <div className="relative h-48 overflow-hidden">
-                <video
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                >
-                  <source src={project.videoUrl} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
+                {project.videoUrl ? (
+                  <video
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                  >
+                    <source src={project.videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                ) : (
+                  <Image
+                    src={project.imageUrl!}
+                    alt={project.title}
+                    width={400}
+                    height={200}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                )}
 
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="flex space-x-4">
