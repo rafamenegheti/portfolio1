@@ -63,7 +63,7 @@ const AboutSection = () => {
   };
 
   return (
-    <section id="about" className="py-20 bg-gray-50">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -82,7 +82,7 @@ const AboutSection = () => {
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
             I&apos;m a passionate full-stack developer with a keen eye for
             design and a love for creating seamless user experiences. With
@@ -92,7 +92,6 @@ const AboutSection = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Bio Section */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -102,14 +101,14 @@ const AboutSection = () => {
           >
             <motion.h3
               variants={itemVariants}
-              className="text-2xl font-semibold text-gray-900 mb-4"
+              className="text-2xl font-semibold text-gray-900 dark:text-white mb-4"
             >
               My Journey
             </motion.h3>
 
             <motion.p
               variants={itemVariants}
-              className="text-gray-600 leading-relaxed"
+              className="text-gray-600 dark:text-gray-400 leading-relaxed"
             >
               Started my journey in web development 3+ years ago, I&apos;ve had
               the privilege of working on diverse projects ranging from
@@ -119,7 +118,7 @@ const AboutSection = () => {
 
             <motion.p
               variants={itemVariants}
-              className="text-gray-600 leading-relaxed"
+              className="text-gray-600 dark:text-gray-400 leading-relaxed"
             >
               When I&apos;m not coding, you&apos;ll find me exploring new
               technologies, contributing to open-source projects, or sharing
@@ -131,18 +130,25 @@ const AboutSection = () => {
               variants={itemVariants}
               className="grid grid-cols-2 gap-4 pt-6"
             >
-              <div className="bg-white p-4 rounded-xl shadow-md">
-                <h4 className="text-2xl font-bold text-blue-600">50+</h4>
-                <p className="text-gray-600">Projects Completed</p>
+              <div className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-md">
+                <h4 className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                  50+
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Projects Completed
+                </p>
               </div>
-              <div className="bg-white p-4 rounded-xl shadow-md">
-                <h4 className="text-2xl font-bold text-purple-600">3+</h4>
-                <p className="text-gray-600">Years Experience</p>
+              <div className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-md">
+                <h4 className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                  3+
+                </h4>
+                <p className="text-gray-600 dark:text-gray-400">
+                  Years Experience
+                </p>
               </div>
             </motion.div>
           </motion.div>
 
-          {/* Skills Grid */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -151,7 +157,7 @@ const AboutSection = () => {
           >
             <motion.h3
               variants={itemVariants}
-              className="text-2xl font-semibold text-gray-900 mb-6"
+              className="text-2xl font-semibold text-gray-900 dark:text-white mb-6"
             >
               Skills & Technologies
             </motion.h3>
@@ -167,11 +173,11 @@ const AboutSection = () => {
                     y: -5,
                     transition: { type: "spring" as const, stiffness: 300 },
                   }}
-                  className="bg-white p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group cursor-pointer"
+                  className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group cursor-pointer"
                 >
                   <div className="flex flex-col items-center text-center space-y-2">
-                    <skill.icon className="w-8 h-8 text-blue-600 group-hover:text-purple-600 transition-colors duration-300" />
-                    <span className="text-sm font-medium text-gray-900">
+                    <skill.icon className="w-8 h-8 text-blue-600 dark:text-blue-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300" />
+                    <span className="text-sm font-medium text-gray-900 dark:text-white">
                       {skill.name}
                     </span>
                   </div>

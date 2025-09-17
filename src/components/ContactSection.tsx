@@ -36,10 +36,8 @@ const ContactSection = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
     await new Promise((resolve) => setTimeout(resolve, 2000));
 
-    // For now, just open email client with pre-filled data
     const subject = encodeURIComponent(
       formData.subject || "Contact from Portfolio"
     );
@@ -103,7 +101,7 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-50">
+    <section id="contact" className="py-20 bg-gray-50 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -122,7 +120,7 @@ const ContactSection = () => {
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
             Have a project in mind or want to collaborate? I&apos;d love to hear
             from you. Let&apos;s create something amazing together!
@@ -130,17 +128,16 @@ const ContactSection = () => {
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
-            className="bg-white rounded-2xl shadow-lg p-8"
+            className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg p-8"
           >
             <motion.h3
               variants={itemVariants}
-              className="text-2xl font-semibold text-gray-900 mb-6"
+              className="text-2xl font-semibold text-gray-900 dark:text-white mb-6"
             >
               Send a Message
             </motion.h3>
@@ -150,7 +147,7 @@ const ContactSection = () => {
                 <motion.div variants={itemVariants}>
                   <label
                     htmlFor="name"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Name
                   </label>
@@ -161,7 +158,7 @@ const ContactSection = () => {
                     value={formData.name}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
                     placeholder="Your Name"
                   />
                 </motion.div>
@@ -169,7 +166,7 @@ const ContactSection = () => {
                 <motion.div variants={itemVariants}>
                   <label
                     htmlFor="email"
-                    className="block text-sm font-medium text-gray-700 mb-2"
+                    className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                   >
                     Email
                   </label>
@@ -180,7 +177,7 @@ const ContactSection = () => {
                     value={formData.email}
                     onChange={handleInputChange}
                     required
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                    className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
                     placeholder="your.email@example.com"
                   />
                 </motion.div>
@@ -189,7 +186,7 @@ const ContactSection = () => {
               <motion.div variants={itemVariants}>
                 <label
                   htmlFor="subject"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Subject
                 </label>
@@ -200,7 +197,7 @@ const ContactSection = () => {
                   value={formData.subject}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
                   placeholder="Project Collaboration"
                 />
               </motion.div>
@@ -208,7 +205,7 @@ const ContactSection = () => {
               <motion.div variants={itemVariants}>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                 >
                   Message
                 </label>
@@ -219,7 +216,7 @@ const ContactSection = () => {
                   onChange={handleInputChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 bg-white text-gray-900 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none"
+                  className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none"
                   placeholder="Tell me about your project..."
                 />
               </motion.div>
@@ -244,7 +241,6 @@ const ContactSection = () => {
             </form>
           </motion.div>
 
-          {/* Contact Info */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -254,7 +250,7 @@ const ContactSection = () => {
           >
             <motion.h3
               variants={itemVariants}
-              className="text-2xl font-semibold text-gray-900 mb-6"
+              className="text-2xl font-semibold text-gray-900 dark:text-white mb-6"
             >
               Let&apos;s Connect
             </motion.h3>
@@ -267,23 +263,25 @@ const ContactSection = () => {
                   href={info.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-4 p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group"
+                  className="flex items-center space-x-4 p-4 bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group"
                 >
-                  <div className="p-3 bg-blue-100 rounded-xl group-hover:bg-blue-200 transition-colors duration-200">
-                    <info.icon className="w-6 h-6 text-blue-600" />
+                  <div className="p-3 bg-blue-100 dark:bg-blue-900/30 rounded-xl group-hover:bg-blue-200 dark:group-hover:bg-blue-900/50 transition-colors duration-200">
+                    <info.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-gray-900">
+                    <h4 className="font-semibold text-gray-900 dark:text-white">
                       {info.label}
                     </h4>
-                    <p className="text-gray-600">{info.value}</p>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {info.value}
+                    </p>
                   </div>
                 </motion.a>
               ))}
             </div>
 
             <motion.div variants={itemVariants} className="pt-8">
-              <h4 className="text-lg font-semibold text-gray-900 mb-4">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 Follow Me
               </h4>
               <div className="flex space-x-4">
@@ -294,7 +292,7 @@ const ContactSection = () => {
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="p-3 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 hover:text-blue-600"
+                    className="p-3 bg-white dark:bg-gray-900 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
                     aria-label={social.label}
                   >
                     <social.icon className="w-6 h-6" />

@@ -6,7 +6,6 @@ import { ExternalLink, Github } from "lucide-react";
 import { Project } from "@/types/portfolio";
 
 const ProjectsSection = () => {
-  // Sample projects data - replace with real data
   const projects: Project[] = [
     {
       id: "1",
@@ -110,7 +109,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="py-20 bg-white">
+    <section id="projects" className="py-20 bg-white dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           variants={containerVariants}
@@ -129,7 +128,7 @@ const ProjectsSection = () => {
           </motion.h2>
           <motion.p
             variants={itemVariants}
-            className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
             A showcase of my recent work, featuring web applications, mobile
             apps, and creative solutions that demonstrate my skills in modern
@@ -149,9 +148,8 @@ const ProjectsSection = () => {
               key={project.id}
               variants={cardVariants}
               whileHover={{ y: -10 }}
-              className="group relative bg-gray-50 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
+              className="group relative bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              {/* Video Container */}
               <div className="relative h-48 overflow-hidden">
                 <video
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -164,7 +162,6 @@ const ProjectsSection = () => {
                   Your browser does not support the video tag.
                 </video>
 
-                {/* Overlay that appears on hover */}
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                   <div className="flex space-x-4">
                     {project.liveUrl && (
@@ -193,22 +190,20 @@ const ProjectsSection = () => {
                 </div>
               </div>
 
-              {/* Content */}
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-blue-600 transition-colors duration-200">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 leading-relaxed">
                   {project.description}
                 </p>
 
-                {/* Technologies */}
                 <div className="flex flex-wrap gap-2">
                   {project.technologies.map((tech) => (
                     <span
                       key={tech}
-                      className="px-3 py-1 bg-blue-100 text-blue-600 text-xs font-medium rounded-full"
+                      className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-medium rounded-full"
                     >
                       {tech}
                     </span>
@@ -216,13 +211,11 @@ const ProjectsSection = () => {
                 </div>
               </div>
 
-              {/* Glow effect */}
-              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+              <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-blue-500/10 via-purple-500/10 to-blue-500/10 opacity-0 group-hover:opacity-100 dark:opacity-100 dark:group-hover:opacity-50 transition-opacity duration-300 pointer-events-none"></div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* View More Button */}
         <motion.div
           variants={itemVariants}
           initial="hidden"
