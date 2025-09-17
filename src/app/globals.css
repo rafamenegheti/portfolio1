@@ -27,6 +27,26 @@ body {
 
 html {
   scroll-behavior: smooth;
+  cursor: none;
+}
+
+body {
+  cursor: none;
+}
+
+a,
+button,
+[role="button"],
+.cursor-hover,
+.magnetic {
+  cursor: none;
+}
+
+input,
+textarea,
+[contenteditable],
+.cursor-text {
+  cursor: none;
 }
 
 ::-webkit-scrollbar {

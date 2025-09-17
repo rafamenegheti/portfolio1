@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/contexts/ThemeContext";
+import MagneticCursor from "@/components/MagneticCursor";
+import FloatingParticles from "@/components/FloatingParticles";
+import ScrollProgress from "@/components/ScrollProgress";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -44,7 +47,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <MagneticCursor />
+          <FloatingParticles />
+          <ScrollProgress />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );

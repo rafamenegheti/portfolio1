@@ -3,6 +3,8 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
+import TextReveal from "@/components/TextReveal";
+import AnimatedButton from "@/components/AnimatedButton";
 
 const HeroSection = () => {
   const containerVariants = {
@@ -80,16 +82,22 @@ const HeroSection = () => {
           <motion.div variants={itemVariants} className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
-                Hi, I&apos;m
+                <TextReveal text="Hi, I'm" type="word" delay={0.2} />
               </span>
               <br />
-              <span className="text-gray-900 dark:text-white">Your Name</span>
+              <span className="text-gray-900 dark:text-white">
+                <TextReveal text="Your Name" type="char" delay={0.8} />
+              </span>
             </h1>
           </motion.div>
 
           <motion.div variants={itemVariants} className="mb-8">
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-4">
-              Full Stack Developer & UI/UX Designer
+              <TextReveal
+                text="Full Stack Developer & UI/UX Designer"
+                type="typewriter"
+                delay={1.5}
+              />
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
               I create beautiful, functional, and user-centered digital
@@ -102,24 +110,22 @@ const HeroSection = () => {
             variants={itemVariants}
             className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12"
           >
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <AnimatedButton
               onClick={scrollToContact}
-              className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 flex items-center space-x-2"
+              variant="primary"
+              size="lg"
+              icon={<Mail className="w-5 h-5" />}
             >
-              <Mail className="w-5 h-5" />
-              <span>Get In Touch</span>
-            </motion.button>
+              Get In Touch
+            </AnimatedButton>
 
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="px-8 py-4 border-2 border-gray-300 dark:border-gray-600 hover:border-blue-500 dark:hover:border-blue-400 text-gray-900 dark:text-white font-semibold rounded-xl hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all duration-300 flex items-center space-x-2"
+            <AnimatedButton
+              variant="outline"
+              size="lg"
+              icon={<Download className="w-5 h-5" />}
             >
-              <Download className="w-5 h-5" />
-              <span>Download CV</span>
-            </motion.button>
+              Download CV
+            </AnimatedButton>
           </motion.div>
 
           <motion.div

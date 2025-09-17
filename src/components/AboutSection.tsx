@@ -2,6 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import InteractiveCard from "@/components/InteractiveCard";
+import TextReveal from "@/components/TextReveal";
 import {
   Code2,
   Palette,
@@ -77,7 +79,7 @@ const AboutSection = () => {
             className="text-4xl md:text-5xl font-bold mb-6"
           >
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              About Me
+              <TextReveal text="About Me" type="word" delay={0.2} />
             </span>
           </motion.h2>
           <motion.p
@@ -168,19 +170,17 @@ const AboutSection = () => {
                   key={skill.name}
                   variants={skillVariants}
                   custom={index}
-                  whileHover={{
-                    scale: 1.05,
-                    y: -5,
-                    transition: { type: "spring" as const, stiffness: 300 },
-                  }}
-                  className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 group cursor-pointer"
                 >
-                  <div className="flex flex-col items-center text-center space-y-2">
-                    <skill.icon className="w-8 h-8 text-blue-600 dark:text-blue-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300" />
-                    <span className="text-sm font-medium text-gray-900 dark:text-white">
-                      {skill.name}
-                    </span>
-                  </div>
+                  <InteractiveCard className="h-full" glowColor="blue">
+                    <div className="p-4">
+                      <div className="flex flex-col items-center text-center space-y-2">
+                        <skill.icon className="w-8 h-8 text-blue-600 dark:text-blue-400 group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors duration-300" />
+                        <span className="text-sm font-medium text-gray-900 dark:text-white">
+                          {skill.name}
+                        </span>
+                      </div>
+                    </div>
+                  </InteractiveCard>
                 </motion.div>
               ))}
             </div>
