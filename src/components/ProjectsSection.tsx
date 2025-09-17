@@ -75,7 +75,7 @@ const ProjectsSection = () => {
 
   return (
     <section id="projects" className="py-20 bg-white dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
         <motion.div
           variants={containerVariants}
           initial="hidden"
@@ -85,9 +85,15 @@ const ProjectsSection = () => {
         >
           <motion.h2
             variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold mb-6"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 px-4"
           >
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span
+              className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block"
+              style={{
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
               Featured Projects
             </span>
           </motion.h2>
