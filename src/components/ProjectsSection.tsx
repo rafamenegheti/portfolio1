@@ -35,38 +35,6 @@ const ProjectsSection = () => {
       technologies: ["Next.js", "ReactJs", "TailwindCSS"],
       githubUrl: "https://github.com/rafamenegheti/bewear",
     },
-    {
-      id: "4",
-      title: "Weather App",
-      description:
-        "A beautiful weather application with location-based forecasts, interactive maps, and personalized weather alerts.",
-      videoUrl:
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-      technologies: ["React Native", "TypeScript", "Weather API"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-    },
-    {
-      id: "5",
-      title: "Portfolio Website",
-      description:
-        "A modern, responsive portfolio website with smooth animations, dark mode support, and optimized performance.",
-      videoUrl:
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-      technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
-      githubUrl: "https://github.com",
-      liveUrl: "https://example.com",
-    },
-    {
-      id: "6",
-      title: "Chat Application",
-      description:
-        "Real-time chat application with group messaging, file sharing, emoji reactions, and end-to-end encryption.",
-      videoUrl:
-        "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-      technologies: ["React", "Socket.io", "Node.js", "MongoDB"],
-      githubUrl: "https://github.com",
-    },
   ];
 
   const containerVariants = {
@@ -146,7 +114,7 @@ const ProjectsSection = () => {
               whileHover={{ y: -10 }}
               className="group relative bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative aspect-video overflow-hidden">
                 {project.videoUrl ? (
                   <video
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
@@ -229,13 +197,13 @@ const ProjectsSection = () => {
           viewport={{ once: true }}
           className="text-center mt-12"
         >
-          <motion.button
+          {/* <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
           >
             View All Projects
-          </motion.button>
+          </motion.button> */}
         </motion.div>
       </div>
     </section>
