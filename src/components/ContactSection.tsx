@@ -5,15 +5,7 @@ import { motion } from "framer-motion";
 import AnimatedButton from "@/components/AnimatedButton";
 import TextReveal from "@/components/TextReveal";
 import InteractiveCard from "@/components/InteractiveCard";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Send,
-  Github,
-  Linkedin,
-  Twitter,
-} from "lucide-react";
+import { Mail, Phone, MapPin, Send, Github, Linkedin } from "lucide-react";
 import { ContactForm } from "@/types/portfolio";
 import { useToastContext } from "@/contexts/ToastContext";
 
@@ -78,7 +70,7 @@ const ContactSection = () => {
     { icon: Github, href: "https://github.com/rafamenegheti", label: "GitHub" },
     {
       icon: Linkedin,
-      href: "www.linkedin.com/in/rafael-menegheti-4532a0219",
+      href: "https://www.linkedin.com/in/rafael-menegheti-4532a0219",
       label: "LinkedIn",
     },
   ];

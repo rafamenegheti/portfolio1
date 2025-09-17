@@ -37,6 +37,15 @@ const HeroSection = () => {
     }
   };
 
+  const downloadCV = () => {
+    const link = document.createElement("a");
+    link.href = "/RafaelC2.pdf";
+    link.download = "Rafael Menegheti CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <section
       id="home"
@@ -120,6 +129,7 @@ const HeroSection = () => {
             </AnimatedButton>
 
             <AnimatedButton
+              onClick={downloadCV}
               variant="outline"
               size="lg"
               icon={<Download className="w-5 h-5" />}
@@ -134,7 +144,7 @@ const HeroSection = () => {
           >
             <motion.a
               whileHover={{ scale: 1.2, y: -2 }}
-              href="https://github.com"
+              href="https://github.com/rafamenegheti"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
@@ -144,7 +154,7 @@ const HeroSection = () => {
 
             <motion.a
               whileHover={{ scale: 1.2, y: -2 }}
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/rafael-menegheti-4532a0219"
               target="_blank"
               rel="noopener noreferrer"
               className="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
