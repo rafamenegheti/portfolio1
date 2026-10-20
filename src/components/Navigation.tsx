@@ -16,10 +16,11 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Projects", href: "#projects" },
-    { label: "Contact", href: "#contact" },
+    { label: "Início", href: "#home" },
+    { label: "Sobre", href: "#about" },
+    { label: "Experiência", href: "#experience" },
+    { label: "Projetos", href: "#projects" },
+    { label: "Contato", href: "#contact" },
   ];
 
   useEffect(() => {
@@ -88,8 +89,8 @@ const Navigation = () => {
                 transition={{ delay: 0.4 }}
                 onClick={toggleTheme}
                 className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
-                aria-label="Toggle theme"
-                title={`Current theme: ${theme}. Click to toggle.`}
+                aria-label="Alternar tema"
+                title={`Tema atual: ${theme}. Clique para alternar.`}
               >
                 {theme === "dark" ? (
                   <Sun className="w-5 h-5 text-yellow-500" />
@@ -105,7 +106,7 @@ const Navigation = () => {
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                 className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors duration-200"
-                aria-label="Open menu"
+                aria-label="Abrir menu"
               >
                 {isMobileMenuOpen ? (
                   <X className="w-5 h-5" />

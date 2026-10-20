@@ -35,7 +35,7 @@ const ContactSection = () => {
 
     addToast({
       message:
-        "🚧 Contact form is currently in development. This feature will be available soon!",
+        "🚧 O formulário de contato está em desenvolvimento e estará disponível em breve. Por enquanto, fale comigo por e-mail ou LinkedIn.",
       type: "info",
       duration: 6000,
     });
@@ -54,15 +54,15 @@ const ContactSection = () => {
     },
     {
       icon: Phone,
-      label: "Phone",
+      label: "Telefone",
       value: "+55 (16) 99465-3737",
       href: "tel:+5516994653737",
     },
     {
       icon: MapPin,
-      label: "Location",
-      value: "Franca - SP, BR",
-      href: "https://maps.google.com/?q=San+Francisco,CA",
+      label: "Localização",
+      value: "São Paulo - SP, BR",
+      href: "https://maps.google.com/?q=S%C3%A3o+Paulo,SP",
     },
   ];
 
@@ -119,15 +119,15 @@ const ContactSection = () => {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              <TextReveal text="Get In Touch" type="word" delay={0.2} />
+              <TextReveal text="Entre em Contato" type="word" delay={0.2} />
             </span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
-            Have a project in mind or want to collaborate? I&apos;d love to hear
-            from you. Let&apos;s create something amazing together!
+            Tem um projeto em mente, uma vaga ou quer colaborar? Adoraria ouvir
+            você. Vamos construir algo incrível juntos!
           </motion.p>
         </motion.div>
 
@@ -144,7 +144,7 @@ const ContactSection = () => {
                   variants={itemVariants}
                   className="text-2xl font-semibold text-gray-900 dark:text-white mb-6"
                 >
-                  Send a Message
+                  Enviar Mensagem
                 </motion.h3>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
@@ -154,7 +154,7 @@ const ContactSection = () => {
                         htmlFor="name"
                         className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                       >
-                        Name
+                        Nome
                       </label>
                       <input
                         type="text"
@@ -164,7 +164,7 @@ const ContactSection = () => {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
-                        placeholder="Your Name"
+                        placeholder="Seu nome"
                       />
                     </motion.div>
 
@@ -183,7 +183,7 @@ const ContactSection = () => {
                         onChange={handleInputChange}
                         required
                         className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
-                        placeholder="your.email@example.com"
+                        placeholder="seu.email@exemplo.com"
                       />
                     </motion.div>
                   </div>
@@ -193,7 +193,7 @@ const ContactSection = () => {
                       htmlFor="subject"
                       className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                     >
-                      Subject
+                      Assunto
                     </label>
                     <input
                       type="text"
@@ -203,7 +203,7 @@ const ContactSection = () => {
                       onChange={handleInputChange}
                       required
                       className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
-                      placeholder="Project Collaboration"
+                      placeholder="Oportunidade / Colaboração"
                     />
                   </motion.div>
 
@@ -212,7 +212,7 @@ const ContactSection = () => {
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
                     >
-                      Message
+                      Mensagem
                     </label>
                     <textarea
                       id="message"
@@ -222,7 +222,7 @@ const ContactSection = () => {
                       required
                       rows={6}
                       className="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 resize-none"
-                      placeholder="Tell me about your project..."
+                      placeholder="Conte mais sobre o projeto ou a vaga..."
                     />
                   </motion.div>
 
@@ -241,7 +241,7 @@ const ContactSection = () => {
                         )
                       }
                     >
-                      {isSubmitting ? "Sending..." : "Send Message"}
+                      {isSubmitting ? "Enviando..." : "Enviar Mensagem"}
                     </AnimatedButton>
                   </motion.div>
                 </form>
@@ -260,7 +260,7 @@ const ContactSection = () => {
               variants={itemVariants}
               className="text-2xl font-semibold text-gray-900 dark:text-white mb-6"
             >
-              Let&apos;s Connect
+              Vamos nos Conectar
             </motion.h3>
 
             <div className="space-y-6">
@@ -290,7 +290,7 @@ const ContactSection = () => {
 
             <motion.div variants={itemVariants} className="pt-8">
               <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                Follow Me
+                Me Siga
               </h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social) => (

@@ -23,19 +23,25 @@ const AboutSection = () => {
   const skills = [
     { name: "JavaScript", icon: Code2, category: "language" },
     { name: "TypeScript", icon: Code2, category: "language" },
-    { name: "React/Next.js", icon: Braces, category: "frontend" },
-    { name: "React Native", icon: Globe, category: "mobile" },
-    { name: "Node/Express", icon: Server, category: "backend" },
+    { name: "Java", icon: Code2, category: "language" },
     { name: "Python", icon: Code2, category: "language" },
     { name: "C++", icon: Code2, category: "language" },
+    { name: "React/Next.js", icon: Braces, category: "frontend" },
+    { name: "Vue/Nuxt.js", icon: Braces, category: "frontend" },
+    { name: "Angular", icon: Braces, category: "frontend" },
+    { name: "React Native", icon: Globe, category: "mobile" },
+    { name: "Node/Express", icon: Server, category: "backend" },
+    { name: "NestJS", icon: Server, category: "backend" },
+    { name: "Spring Boot", icon: Server, category: "backend" },
     { name: "HTML/CSS", icon: Palette, category: "frontend" },
-    { name: "SQL/NoSQL", icon: Database, category: "database" },
-    { name: "Git", icon: GitBranchPlus, category: "tools" },
+    { name: "PostgreSQL/MySQL", icon: Database, category: "database" },
+    { name: "MongoDB/Prisma", icon: Database, category: "database" },
+    { name: "Git/GitHub", icon: GitBranchPlus, category: "tools" },
     { name: "AWS", icon: Cloud, category: "cloud" },
     { name: "Docker", icon: Container, category: "tools" },
-    { name: "Jest/Testing", icon: TestTube, category: "testing" },
-    { name: "AI Tools", icon: Zap, category: "tools" },
-    { name: "Clean Code", icon: FileText, category: "practices" },
+    { name: "Jest/Vitest", icon: TestTube, category: "testing" },
+    { name: "IA Generativa", icon: Zap, category: "tools" },
+    { name: "Clean Code/SOLID", icon: FileText, category: "practices" },
   ];
 
   const containerVariants = {
@@ -94,20 +100,19 @@ const AboutSection = () => {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              <TextReveal text="About Me" type="word" delay={0.2} />
+              <TextReveal text="Sobre Mim" type="word" delay={0.2} />
             </span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
-            I’m a Full Stack Web Developer with 4 years of experience building
-            modern, scalable, and high-performance applications. Skilled in
-            Next.js, React, and Node.js, I specialize in delivering seamless
-            user experiences across the entire development cycle. With a strong
-            foundation in cloud solutions (AWS), automated testing, and clean
-            code practices, I thrive on turning complex challenges into
-            efficient, innovative software solutions.
+            Sou Desenvolvedor Full Stack com mais de 6 anos de experiência em TI
+            e no desenvolvimento de aplicações web escaláveis e de alta
+            performance. Especializado em Next.js, React, Node.js (NestJS e
+            Express), TypeScript, Java (Spring Boot) e Angular, trabalho com
+            APIs RESTful, PostgreSQL, MongoDB, AWS e testes automatizados,
+            sempre aplicando Clean Code, SOLID e TDD.
           </motion.p>
         </motion.div>
 
@@ -123,32 +128,29 @@ const AboutSection = () => {
               variants={itemVariants}
               className="text-2xl font-semibold text-gray-900 dark:text-white mb-4"
             >
-              My Journey
+              Minha Jornada
             </motion.h3>
 
             <motion.p
               variants={itemVariants}
               className="text-gray-600 dark:text-gray-400 leading-relaxed"
             >
-              I started my journey in tech over 4 years ago, first supporting
-              enterprise systems and later moving into full-stack web
-              development. Since then, I’ve had the opportunity to work on
-              diverse projects — from building scalable e-learning platforms and
-              B2B solutions to developing data-driven applications for
-              meteorological analysis.
+              Comecei na área de tecnologia em 2020, dando suporte a sistemas
+              empresariais, e depois migrei para o desenvolvimento web
+              full-stack. Desde então, trabalhei em projetos variados: de
+              plataformas de ensino e soluções B2B a aplicações orientadas a
+              dados para análise meteorológica e, hoje, um CMS multi-tenant na
+              4U EdTech.
             </motion.p>
 
             <motion.p
               variants={itemVariants}
               className="text-gray-600 dark:text-gray-400 leading-relaxed"
             >
-              My approach combines technical expertise in Next.js, React,
-              Node.js, and AWS with a focus on clean code and performance
-              optimization. Outside of coding, I’m always exploring new
-              technologies, improving my craft through testing practices, and
-              working on personal projects that challenge my creativity. I
-              believe in building software that is not only functional, but also
-              maintainable, scalable, and impactful.
+              Uso IA generativa e LLMs no meu fluxo de trabalho para acelerar
+              implementação, refatoração, testes e documentação, sem abrir mão
+              de código limpo, performance e manutenibilidade. Acredito em
+              software que seja funcional, escalável e fácil de evoluir.
             </motion.p>
 
             <motion.div
@@ -160,15 +162,15 @@ const AboutSection = () => {
                   10+
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Projects Completed
+                  Projetos Concluídos
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-900 p-4 rounded-xl shadow-md">
                 <h4 className="text-2xl font-bold text-purple-600 dark:text-purple-400">
-                  4+
+                  6+
                 </h4>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Years Experience
+                  Anos de Experiência
                 </p>
               </div>
             </motion.div>
@@ -184,7 +186,7 @@ const AboutSection = () => {
               variants={itemVariants}
               className="text-2xl font-semibold text-gray-900 dark:text-white mb-6"
             >
-              Skills & Technologies
+              Habilidades & Tecnologias
             </motion.h3>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">

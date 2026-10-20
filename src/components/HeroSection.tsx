@@ -39,8 +39,8 @@ const HeroSection = () => {
 
   const downloadCV = () => {
     const link = document.createElement("a");
-    link.href = "/RafaelC2.pdf";
-    link.download = "Rafael Menegheti CV.pdf";
+    link.href = "/Rafael_Menegheti_Curriculo.pdf";
+    link.download = "Rafael Menegheti - Curriculo.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -91,7 +91,7 @@ const HeroSection = () => {
           <motion.div variants={itemVariants} className="mb-8">
             <h1 className="text-5xl md:text-7xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-blue-800 bg-clip-text text-transparent">
-                <TextReveal text="Hi, I'm" type="word" delay={0.2} />
+                <TextReveal text="Olá, eu sou" type="word" delay={0.2} />
               </span>
               <br />
               <span className="text-gray-900 dark:text-white">
@@ -103,15 +103,15 @@ const HeroSection = () => {
           <motion.div variants={itemVariants} className="mb-8">
             <h2 className="text-2xl md:text-3xl font-semibold text-gray-700 dark:text-gray-300 mb-4">
               <TextReveal
-                text="Full Stack Developer"
+                text="Desenvolvedor Full Stack"
                 type="typewriter"
                 delay={1.5}
               />
             </h2>
             <p className="text-lg md:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-              I create beautiful, functional, and user-centered digital
-              experiences. Passionate about clean code, innovative solutions,
-              and bringing ideas to life.
+              Construo aplicações web escaláveis e de alta performance com
+              Next.js, React, Node.js, TypeScript e Java, e uso IA generativa no
+              dia a dia para entregar com mais produtividade e qualidade.
             </p>
           </motion.div>
 
@@ -125,7 +125,7 @@ const HeroSection = () => {
               size="lg"
               icon={<Mail className="w-5 h-5" />}
             >
-              Get In Touch
+              Entrar em Contato
             </AnimatedButton>
 
             <AnimatedButton
@@ -134,7 +134,7 @@ const HeroSection = () => {
               size="lg"
               icon={<Download className="w-5 h-5" />}
             >
-              Download CV
+              Baixar Currículo
             </AnimatedButton>
           </motion.div>
 

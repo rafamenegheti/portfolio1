@@ -3,40 +3,65 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink, Github, Code2 } from "lucide-react";
 import { Project } from "@/types/portfolio";
 
 const ProjectsSection = () => {
   const projects: Project[] = [
     {
       id: "1",
+      title: "iCompras",
+      description:
+        "Plataforma de e-commerce em microsserviços com arquitetura orientada a eventos, usando Spring Boot e Apache Kafka para demonstrar padrões modernos de sistemas distribuídos.",
+      technologies: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Docker"],
+      githubUrl: "https://github.com/rafamenegheti/iCompras",
+    },
+    {
+      id: "2",
+      title: "McDonald's Self Attending",
+      description:
+        "Plataforma de pedidos para restaurantes com suporte multi-restaurante, carrinho de compras, gerenciamento de pedidos e pagamentos via Stripe, com PostgreSQL e Prisma ORM.",
+      technologies: ["Next.js", "React", "PostgreSQL", "Prisma", "Stripe"],
+      githubUrl: "https://github.com/rafamenegheti/mcdonalds-self-attending",
+    },
+    {
+      id: "3",
+      title: "Contact Management System",
+      description:
+        "API REST para gerenciamento de contatos e telefones, com busca avançada, integração com dados meteorológicos e documentação em Swagger.",
+      technologies: ["Fastify", "Zod", "Drizzle ORM", "PostgreSQL", "Vitest"],
+      githubUrl: "https://github.com/rafamenegheti/Contact-Management-System-API",
+    },
+    {
+      id: "4",
       title: "ig.news",
       description:
-        "ig.news is a subscription-based newsletter application built with Next.js, featuring Stripe payments, user authentication, and content management through Prismic CMS.",
+        "Aplicação de newsletter por assinatura com Next.js, pagamentos via Stripe, autenticação de usuários e gerenciamento de conteúdo com Prismic CMS.",
       videoUrl: "/ignews.mp4",
       technologies: ["Next.js", "ReactJs", "FaunaDB", "Stripe"],
       githubUrl: "https://github.com/rafamenegheti/ignews",
       liveUrl: "https://ignews-qos25pzu8-rafamenegheti.vercel.app",
     },
     {
-      id: "2",
+      id: "5",
       title: "dashgo.",
       description:
-        "DashGo is a Next.js admin dashboard application built with Chakra UI that includes user authentication, data visualization charts, and user management functionality.",
+        "Dashboard administrativo com Next.js e Chakra UI, incluindo autenticação, gráficos de visualização de dados e gerenciamento de usuários.",
       videoUrl: "/dashgo.mp4",
       technologies: ["Next.js", "TypeScript"],
       githubUrl: "https://github.com/rafamenegheti/dashgo",
     },
     {
-      id: "3",
+      id: "6",
       title: "BEWEAR",
       description:
-        "BEWEAR is a modern e-commerce fashion website built with Next.js 15, featuring responsive design, user authentication, shopping cart functionality, and a complete product catalog for clothing and accessories.",
+        "E-commerce de moda com Next.js 15, design responsivo, autenticação de usuários, carrinho de compras e catálogo completo de produtos.",
       videoUrl: "/bewear.mp4",
       technologies: ["Next.js", "ReactJs", "TailwindCSS"],
       githubUrl: "https://github.com/rafamenegheti/bewear",
     },
   ];
+
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -94,16 +119,16 @@ const ProjectsSection = () => {
                 WebkitTextFillColor: "transparent",
               }}
             >
-              Featured Projects
+              Projetos em Destaque
             </span>
           </motion.h2>
           <motion.p
             variants={itemVariants}
             className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed"
           >
-            A showcase of my recent work, featuring web applications, mobile
-            apps, and creative solutions that demonstrate my skills in modern
-            development technologies.
+            Uma seleção dos meus projetos, entre aplicações full stack e APIs
+            RESTful, que demonstram minhas habilidades com tecnologias modernas
+            de desenvolvimento.
           </motion.p>
         </motion.div>
 
@@ -131,16 +156,20 @@ const ProjectsSection = () => {
                     playsInline
                   >
                     <source src={project.videoUrl} type="video/mp4" />
-                    Your browser does not support the video tag.
+                    Seu navegador não suporta a tag de vídeo.
                   </video>
-                ) : (
+                ) : project.imageUrl ? (
                   <Image
-                    src={project.imageUrl!}
+                    src={project.imageUrl}
                     alt={project.title}
                     width={400}
                     height={200}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-blue-600 via-purple-600 to-blue-800 group-hover:scale-110 transition-transform duration-700">
+                    <Code2 className="w-16 h-16 text-white/80" />
+                  </div>
                 )}
 
                 <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">

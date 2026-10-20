@@ -18,9 +18,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Portfolio - Rafael Menegheti",
+  title: "Rafael Menegheti | Desenvolvedor Full Stack",
   description:
-    "Modern, elegant personal portfolio showcasing full-stack development projects and skills.",
+    "Portfólio de Rafael Menegheti, Desenvolvedor Full Stack com mais de 6 anos de experiência em TI. Next.js, React, Node.js, NestJS, TypeScript, Java, AWS e IA generativa.",
 };
 
 export default function RootLayout({
@@ -29,7 +29,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
         <script
           dangerouslySetInnerHTML={{
